@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bode's Definitive Sports Rankings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <h1 class="site-title">Bode's Definitive Sports Rankings.</h1>
+        <p class="site-subtitle">
+          Explore and compare sports across Athletics, Tactics, Spectacle, Pacing, and Rules.
+        </p>
+      </header>
+
+      <main class="layout">
+        <section class="panel panel-left">
+          <div class="panel-header">
+            <h2 class="panel-title">Sports List</h2>
+            <p class="panel-description">
+              Click a column header to sort. Click a sport to inspect its profile.
+            </p>
+          </div>
+
+          <div class="table-wrapper">
+            <table id="sports-table">
+              <thead>
+                <tr>
+                  <th class="col-rank">#</th>
+                  <th data-key="sport">Sport</th>
+                  <th data-key="overall">Overall</th>
+                  <th data-key="athletics">Athletics</th>
+                  <th data-key="tactics">Tactics</th>
+                  <th data-key="spectacle">Spectacle</th>
+                  <th data-key="pacing">Pacing</th>
+                  <th data-key="rules">Rules</th>
+                </tr>
+              </thead>
+              <tbody id="sports-table-body">
+                <!-- Populated by script.js -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel panel-right">
+          <div class="panel-header">
+            <h2 class="panel-title" id="detail-title">Select a sport</h2>
+            <p class="panel-description" id="detail-subtitle">
+              Click any sport on the left to view its radar chart and detailed scores.
+            </p>
+          </div>
+
+          <div class="radar-card">
+            <div class="radar-header">
+              <div class="radar-label">Radar Profile</div>
+              <div class="radar-meta" id="detail-meta"></div>
+            </div>
+            <div class="radar-canvas-wrapper">
+              <canvas id="radar-canvas"></canvas>
+            </div>
+            <div class="radar-legend" id="radar-stats">
+              <!-- Filled dynamically with score breakdown -->
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>Data source: <code>sports.csv</code></span>
+      </footer>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
+  </html>
+

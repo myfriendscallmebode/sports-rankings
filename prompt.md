@@ -1,0 +1,3 @@
+I have a file sports.csv with a list of sports and scores. You should inspect it, it is short.
+
+I want you to build a webpage that I will host on github pages with this list. The list should be able to be sorted by each score, showing the rank on the left side. If a sport is clicked, a container on the right should open to reveal a radar chart of the sport, with axes being the different scores (Athletics, Tactics, Spectacle, Pacing, Rules). The site should be dark mode and look beautiful and modern. The title at the top should read "Bode's Definitive Sports Rankings."
